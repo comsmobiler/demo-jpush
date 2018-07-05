@@ -41,9 +41,6 @@
     <ApplicationIcon>Smobiler_128.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="cn.jpush.api">
-      <HintPath>..\cn.jpush.api.dll</HintPath>
-    </Reference>
     <Reference Include="Smobiler.Utility" />
     <Reference Include="Smobiler.Core" />
     <Reference Include="Smobiler.Core.Controls" />

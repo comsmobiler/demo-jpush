@@ -15,7 +15,7 @@ namespace JPushTest
         /// </summary>
         private static string appKey = "用户填写";
         private static string appSecret = "用户填写";
-        PushClient client = new PushClient(appKey, appSecret);
+        PushClient jPushClient = new PushClient(appKey, appSecret);
 
         private void button1_Press(object sender, EventArgs e)
         {
@@ -30,52 +30,122 @@ namespace JPushTest
 
         private void button2_Press(object sender, EventArgs e)
         {
-            client.Push(textBox2.Text, textBox1.Text);
+            try
+            {
+                jPushClient.Push(textBox2.Text, textBox1.Text);
+            }
+            catch (cn.jpush.api.common.APIRequestException apiex)
+            {
+                MessageBox.Show(string.Format("{0}/{1}", apiex.Message, apiex.ErrorMessage));
+            }
         }
 
         private void button3_Press(object sender, EventArgs e)
         {
-            client.PushAll(textBox2.Text, PushPlatform.android);
+            try
+            {
+                jPushClient.PushAll(textBox2.Text, PushPlatform.android);
+            }
+            catch (cn.jpush.api.common.APIRequestException apiex)
+            {
+                MessageBox.Show(string.Format("{0}/{1}", apiex.Message, apiex.ErrorMessage));
+            }
         }
 
         private void button4_Press(object sender, EventArgs e)
         {
-            client.PushAlert(textBox2.Text, textBox1.Text, textBox1.Text);
+            try
+            {
+                jPushClient.PushAlert(textBox2.Text, textBox1.Text, textBox1.Text);
+            }
+            catch (cn.jpush.api.common.APIRequestException apiex)
+            {
+                MessageBox.Show(string.Format("{0}/{1}", apiex.Message, apiex.ErrorMessage));
+            }
         }
 
         private void button5_Press(object sender, EventArgs e)
         {
-            client.PushAlertAll(textBox2.Text, textBox1.Text, PushPlatform.android);
+            try
+            {
+                jPushClient.PushAlertAll(textBox2.Text, textBox1.Text, PushPlatform.android);
+            }
+            catch (cn.jpush.api.common.APIRequestException apiex)
+            {
+                MessageBox.Show(string.Format("{0}/{1}", apiex.Message, apiex.ErrorMessage));
+            }
         }
 
         private void button6_Press(object sender, EventArgs e)
         {
-            client.PushURL(textBox2.Text, "https://www.baidu.com/", textBox1.Text);
+            try
+            {
+                jPushClient.PushURL(textBox2.Text, "https://www.baidu.com/", textBox1.Text);
+            }
+            catch (cn.jpush.api.common.APIRequestException apiex)
+            {
+                MessageBox.Show(string.Format("{0}/{1}", apiex.Message, apiex.ErrorMessage));
+            }
         }
 
         private void button7_Press(object sender, EventArgs e)
         {
-            client.PushURLAll(textBox2.Text, "https://www.baidu.com/", PushPlatform.android);
+            try
+            {
+                jPushClient.PushURLAll(textBox2.Text, "https://www.baidu.com/", PushPlatform.android);
+            }
+            catch (cn.jpush.api.common.APIRequestException apiex)
+            {
+                MessageBox.Show(string.Format("{0}/{1}", apiex.Message, apiex.ErrorMessage));
+            }
         }
 
         private void button8_Press(object sender, EventArgs e)
         {
-            client.PushClientCallBack(textBox2.Text, textBox2.Text, textBox1.Text);
+            try
+            {
+                jPushClient.PushClientCallBack(textBox2.Text, textBox2.Text, textBox1.Text);
+            }
+            catch (cn.jpush.api.common.APIRequestException apiex)
+            {
+                MessageBox.Show(string.Format("{0}/{1}", apiex.Message, apiex.ErrorMessage));
+            }
         }
 
         private void button9_Press(object sender, EventArgs e)
         {
-            client.PushClientCallBackAll(textBox2.Text, textBox2.Text, PushPlatform.android);
+            try
+            {
+                jPushClient.PushClientCallBackAll(textBox2.Text, textBox2.Text, PushPlatform.android);
+            }
+            catch (cn.jpush.api.common.APIRequestException apiex)
+            {
+                MessageBox.Show(string.Format("{0}/{1}", apiex.Message, apiex.ErrorMessage));
+            }
         }
 
         private void button10_Press(object sender, EventArgs e)
         {
-            client.PushBigText(textBox2.Text, textBox2.Text, textBox1.Text, textBox1.Text);
+            try
+            {
+                jPushClient.PushBigText(textBox2.Text, textBox2.Text, textBox1.Text, textBox1.Text);
+            }
+            catch (cn.jpush.api.common.APIRequestException apiex)
+            {
+                MessageBox.Show(string.Format("{0}/{1}", apiex.Message, apiex.ErrorMessage));
+            }
         }
 
         private void button11_Press(object sender, EventArgs e)
         {
-            client.PushBigTextAll(textBox2.Text, textBox2.Text, textBox1.Text,PushPlatform.all);
+            try
+            {
+                jPushClient.PushBigTextAll(textBox2.Text, textBox2.Text, textBox1.Text, PushPlatform.all);
+            }
+            catch (cn.jpush.api.common.APIRequestException apiex)
+            {
+                MessageBox.Show(string.Format("{0}/{1}", apiex.Message, apiex.ErrorMessage));
+            }
         }
     }
 }
